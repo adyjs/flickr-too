@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Adyjs">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<title>Flickr , Too</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:100|Noto+Sans:400,700|Open+Sans:300|Roboto:100|Permanent+Marker" rel="stylesheet">
+	<link rel="shortcut icon" href="image/favicon.ico">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div id="overlay"></div>
+	<div id="back-top-btn"></div>
+	<div id="zoom-in-container">
+		<img id="close" src="image/close.svg">
+		<span id="prev"></span>
+		<span id="next"></span>
+		<div id="zoom-in-frame"></div>
+	</div>
+	<header>
+		<a class="logo" href="https://Adyjs.github.io/flickr-too/">Flickr , Too</a>
+		<h1>想用 Flickr API 找圖嗎？</h1>
+		<h2>歡迎來到 flickr , too 找你喜歡的圖片</h2>>
+		<div class="search-div" id="search-div">
+			<input placeholder="想找什麼圖？" maxlength="40" type="text" name="search-input" id="search-input">
+			<select name="item-num" id="item-num">
+				<option value="25">顯示 25 張</option>
+				<option value="50" selected>顯示 50 張</option>
+				<option value="100">顯示 100 張</option>
+				<option value="200">顯示 200 張</option>
+				<option value="300">顯示 300 張</option>
+				<option value="400">顯示 400 張</option>
+				<option value="500">顯示 500 張</option>
+			</select>
+			<span class="search-span" id="search-span"></span>
+		</div>
+	</header>
+
+	<main>
+		<section id="main-section">
+			<h5 id="result-board">符合 <span id="search-word"></span> 約有 <span id="response-result-num"></span> 項結果</h5>
+			<ul id="main-section-ul">
+				<li class="target size-1"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-1"></li>
+				<li class="target size-1"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+				<li class="target size-0"></li>
+			</ul>
+			<button type="text" id="next-page-btn">顯示更多圖片</button>
+		</section>
+	</main>
+
+	<footer>
+		<section>
+			<a class="logo" href="https://Adyjs.github.io/flickr-too/">Flickr , Too</a>
+			<h4 class="statement">本網頁之所搜尋功能所展現的圖片為 Yahoo Flickr 及 Flickr 用戶本身所有，本網頁僅串接公開 API 來作「非商業」展示使用，不負相關法律及版權責任。</br></br>The rights of all the searched image with the Yahoo Flickr API are belonging to the Yahoo Flickr and the Flickr users , this website for demo and non-comercial.</h4>
+			<ul>
+				<li class="footer-title">About Flickr API</li>
+				<li><a target="_blank"　rel="noreferrer noopener" href="https://www.flickr.com/services/developer">Flickr Developer Guide</a></li>
+				<li><a target="_blank"　rel="noreferrer noopener" href="https://www.flickr.com/services/api/flickr.photos.getRecent.html">flickr.photos.getRecent</a></li>
+				<li><a target="_blank"　rel="noreferrer noopener" href="https://www.flickr.com/services/api/flickr.photos.search.html">flickr.photos.search</a></li>
+			</ul>
+			<ul>
+				<li class="footer-title">About me</li>
+				<li><a target="_blank"　rel="noreferrer noopener" href="https://github.com/Adyjs">My Github</a></li>
+				<li><a target="_blank"　rel="noreferrer noopener" href="https://Adyjs.github.io/">My Website</a></li>
+			</ul>
+			<ul>
+				<li class="footer-title">Author</li>
+				<li>Adyjs</li>
+				<li>adyjsdev@gmail.com</li>
+			</ul>
+		</section>
+	</footer>
+
+	<script type="text/javascript" src="js/yeah.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
