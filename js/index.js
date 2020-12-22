@@ -11,13 +11,31 @@ window.onload = function(){
 }
 
 var randomDisplay = (function(){
-	var apiKey = yeah || null;
+	var yeahyeah = yeah || null;
 	var perPage = 15;
 	var currentPage = "";
-	var initialUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&nojsoncallback=1&format=json&api_key="+apiKey+"&per_page="+perPage;
-	var retrieveUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+apiKey+"&format=json&nojsoncallback=1";
+	var initialUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&nojsoncallback=1&format=json&api_key="+yeahyeah+"&per_page="+perPage;
+	var retrieveUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+yeahyeah+"&format=json&nojsoncallback=1";
 	var valve = 15;
-	var searchWordArray = ["mountain","sea","landscope","forest","river","sea surfing","Metropolis"];
+	var searchWordArray = [
+		"mountain",
+		"sea",
+		"landscope",
+		"forest",
+		"river",
+		"surfing",
+		"metropolis",
+		"blues",
+		"natural views",
+		"valley",
+		"space",
+		"planet",
+		"car",
+		"citys",
+		"music",
+		"guitar",
+		"books",
+	];
 	var searchWord = "";
 	return {
 		fail : function(){
@@ -102,15 +120,15 @@ var randomDisplay = (function(){
 })();
 
 var search = (function(){
-	var apiKey = yeah || null;
+	var yeahyeah = yeah || null;
 	var searchWord = null;
 	var perPage = 50;
 	var currentPage = "";
 	var pages = null;
 	var resultNum = "";
-	var initialUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&nojsoncallback=1&format=json&api_key="+apiKey;
+	var initialUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&nojsoncallback=1&format=json&api_key="+yeahyeah;
 	var zoomImageId = "";
-	var zoomUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+apiKey+"&format=json&nojsoncallback=1";
+	var zoomUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+yeahyeah+"&format=json&nojsoncallback=1";
 	var zoomOrigin = "";
 	return {
 		effectHandler : {
@@ -346,7 +364,7 @@ var search = (function(){
 				var liTemplate  = "<li id=\""+obj.id+"\" class=\"size-square\"></li>";
 				ul.insertAdjacentHTML("beforeend" , liTemplate);
 				$.ajax({
-					url 	: "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+apiKey+"&photo_id="+obj.id+"&format=json&nojsoncallback=1",
+					url 	: "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key="+yeahyeah+"&photo_id="+obj.id+"&format=json&nojsoncallback=1",
 					method	: "GET",
 					dataType: "json"
 				})

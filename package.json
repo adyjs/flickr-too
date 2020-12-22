@@ -10,6 +10,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
+    "loading-svg": "^1.0.0",
     "selenium-webdriver": "^4.0.0-alpha.8"
   },
   "devDependencies": {},
